@@ -9,7 +9,7 @@ pull:
 	@docker pull dbaibak/jupyter-lab:latest
 
 build:
-	@docker run -it -d -p 127.0.0.1:8888:8888 --name $(call args, defaultstring) dbaibak/jupyter-lab
+	@docker run -it -d -v $(local):/home/dev/app -p 127.0.0.1:8888:8888 --name $(name) dbaibak/jupyter-lab
 
 start:
 	@docker start $(call args, defaultstring)
