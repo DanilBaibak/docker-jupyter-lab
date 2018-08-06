@@ -13,7 +13,7 @@ Prebuilt image is available from the [docker hub](https://hub.docker.com/r/dbaib
 
 ### [With makefile](#makefile):
 * `make pull` - pull latest image;
-* `make build local=path_to_the_project_folder name=name_of_the_container` - build a new container and mount local project folder. The container is available by the url http://127.0.0.1:8888/;
+* `make run local=path_to_the_project_folder name=name_of_the_container` - build a new container and mount local project folder. The container is available by the url http://127.0.0.1:8888/;
 * `make start name_of_the_container` - start specific container
 * `make stop name_of_the_container` - stop specific container
 * `make stop_all` - stop all containers
@@ -24,7 +24,7 @@ Prebuilt image is available from the [docker hub](https://hub.docker.com/r/dbaib
 
 ### [Workflow](#workflow)
 * `make pull` - pull image from the docker hub;
-* `make build local=$PWD name=my-lab` - create container with name *my-lab* and mount it to the *current directory*;
+* `make run local=$PWD name=my-lab` - create container with name *my-lab* and mount it to the *current directory*;
 * got to the url http://127.0.0.1:8888/ - use JupyterLab;
 * `make bash my-lab` - if you need access to the bash;
 * `pip install --user matplotlib` - install new package;
