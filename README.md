@@ -11,7 +11,7 @@ Please follow [installation instructions](https://docs.docker.com/install/) from
 ## Using
 Prebuilt image is available from the [docker hub](https://hub.docker.com/r/dbaibak/jupyter-lab/)
 
-### [With makefile](#using-with-makefile):
+### [With makefile](#makefile):
 * `make pull` - pull latest image;
 * `make build local=path_to_the_project_folder name=name_of_the_container` - build a new container and mount local project folder. The container is available by the url http://127.0.0.1:8888/;
 * `make start name_of_the_container` - start specific container
