@@ -10,9 +10,11 @@ pull:
 
 build:
 	@docker run -it -d -v $(local):/home/dev/app -p 127.0.0.1:8888:8888 --name $(name) dbaibak/jupyter-lab
+	@open http://127.0.0.1:8888/
 
 start:
 	@docker start $(call args, defaultstring)
+	@open http://127.0.0.1:8888/
 
 stop:
 	@docker stop $(call args, defaultstring)
