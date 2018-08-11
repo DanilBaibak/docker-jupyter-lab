@@ -8,7 +8,7 @@ args = `arg="$(filter-out $@,$(MAKECMDGOALS))" && echo $${arg:-${1}}`
 pull:
 	@docker pull dbaibak/jupyter-lab:latest
 
-build:
+run:
 	@docker run -it -d -v $(local):/home/dev/app -p 127.0.0.1:8888:8888 --name $(name) dbaibak/jupyter-lab
 	@open http://127.0.0.1:8888/
 
